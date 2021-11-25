@@ -28,28 +28,34 @@ createDivs(16,16)
 function grayColor() { 
     
     const boxs = container.querySelectorAll('.box')
-    btnGray.textContent = "GRAY"
-    btnGray.addEventListener('click', () => {
-        boxs.forEach(box => box.addEventListener('mouseover', ()=> {
-            let RNum = Math.floor(Math.random() * 256);
-            let GrayScale = `rgb(${RNum},${RNum},${RNum})`
-            box.style.background = GrayScale;
-        }))
-    })
-    buttonsContainer.appendChild(btnGray).classList.add('btn')
-}
-grayColor()
-
-function rgbColor(){
-
-    const boxs = container.querySelectorAll(`.box`)
-    btnRgb.textContent = `Black`
-    btnRgb.addEventListener(`click`, () => {
-        boxs.forEach(box => box.addEventListener(`mouseover`, ()=> {
-            
-            box.style.background = 'black';
+    btnRgb.textContent = "RGB"
+    btnRgb.addEventListener('click' ,() => {
+        boxs.forEach(box => box.addEventListener('mouseover', () => {
+            let R = Math.floor(Math.random() * 256);
+            let G = Math.floor(Math.random() * 256);
+            let B = Math.floor(Math.random() * 256);
+            const RGB = `rgb(${R},${G},${B})`;
+            box.style.background = RGB;
         }))
     })
     buttonsContainer.appendChild(btnRgb).classList.add('btn')
 }
-rgbColor()
+grayColor()
+
+
+function rgbColors() {
+    
+    const boxs = container.querySelectorAll('.box')
+    btnRgb.textContent = "RGB"
+    btnRgb.addEventListener('click' ,() => {
+        boxs.forEach(box => box.addEventListener('mouseover', () => {
+            let R = Math.floor(Math.random() * 256);
+            let G = Math.floor(Math.random() * 256);
+            let B = Math.floor(Math.random() * 256);
+            const RGB = `rgb(${R},${G},${B})`;
+            box.style.background = RGB;
+        }))
+    })
+    buttonsContainer.appendChild(btnRgb).classList.add('btn')
+}
+rgbColors()
