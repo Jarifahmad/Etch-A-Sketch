@@ -1,5 +1,5 @@
 const container = document.querySelector(`.container`)
-const btnBlack = document.createElement(`button`)
+const btnBlack = document.createElement('button')
 const btnGray = document.createElement(`button`)
 const btnRGB = document.createElement(`button`)
 const btnSize = document.createElement(`button`);
@@ -17,17 +17,29 @@ function createDivs(col, rows){
 
 createDivs(16,16)
 
-function grayColor(){
+function blackColor(){
 
     const boxs = container.querySelectorAll(`.box`)
-    btnGray.textContent = `gray`
-    btnGray.addEventListener(`click`, () => {
+    btnBlack.textContent = `Black`
+    btnBlack.addEventListener(`click`, () => {
         boxs.forEach(box => box.addEventListener(`mouseover`, ()=> {
-            let RNum = Math.floor(Math.random() * 256);
-            box.style.background = `rgb(${RNum},${RNum},${RNum})`
+            box.style.background = 'black';
         }))
     })
-
-    buttonsContainer.appendChild(btnGray).classList.add('btn')
+    buttonsContainer.appendChild(btnBlack).classList.add('btn')
 }
+grayColor()
 
+function rgbColor(){
+
+    const boxs = container.querySelectorAll(`.box`)
+    btnRgb.textContent = `Black`
+    btnRgb.addEventListener(`click`, () => {
+        boxs.forEach(box => box.addEventListener(`mouseover`, ()=> {
+            
+            box.style.background = 'black';
+        }))
+    })
+    buttonsContainer.appendChild(btnRgb).classList.add('btn')
+}
+rgbColor()
