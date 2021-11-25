@@ -25,8 +25,6 @@ function creatDivs(col , rows) {
 
 createDivs(16,16)
 
-creatDivs(16,16)
-
 function grayColor() { 
     
     const boxs = container.querySelectorAll('.box')
