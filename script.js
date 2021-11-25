@@ -25,16 +25,20 @@ function creatDivs(col , rows) {
 
 createDivs(16,16)
 
-function blackColor(){
+creatDivs(16,16)
 
-    const boxs = container.querySelectorAll(`.box`)
-    btnBlack.textContent = `Black`
-    btnBlack.addEventListener(`click`, () => {
-        boxs.forEach(box => box.addEventListener(`mouseover`, ()=> {
-            box.style.background = 'black';
+function grayColor() { 
+    
+    const boxs = container.querySelectorAll('.box')
+    btnGray.textContent = "GRAY"
+    btnGray.addEventListener('click', () => {
+        boxs.forEach(box => box.addEventListener('mouseover', ()=> {
+            let RNum = Math.floor(Math.random() * 256);
+            let GrayScale = `rgb(${RNum},${RNum},${RNum})`
+            box.style.background = GrayScale;
         }))
     })
-    buttonsContainer.appendChild(btnBlack).classList.add('btn')
+    buttonsContainer.appendChild(btnGray).classList.add('btn')
 }
 grayColor()
 
